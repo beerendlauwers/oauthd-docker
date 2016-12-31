@@ -1,0 +1,25 @@
+version: '2'
+services:
+  redis-oauthd:
+    container_name: redis-oauthd
+    image: redis
+    ports:
+      - "6379:6379"
+    networks:
+    - oauthd-network
+  oauthd-oauthd:
+    container_name: oauthd-oauthd
+    build:
+      context: ./oauthd
+      dockerfile: Dockerfile
+    ports:
+      - "6284:6284"
+    networks:
+      - oauthd-network
+    links:
+      - redis-oauthd
+    depends_on:
+      - redis-oauthd
+networks:
+  oauthd-network:
+    driver: bridge
