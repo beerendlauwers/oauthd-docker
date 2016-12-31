@@ -50,7 +50,7 @@ oauthd-oauthd    | oauthd listening at http://[::]:6284 for http://localhost:628
 oauthd-oauthd    | Server is ready (load time: 0.9s) Sat, 31 Dec 2016 07:54:56 GMT
 ```
 
-Finally, go to `localhost:6284` to configure the service. **NOTE:** I have ticket open with the `oauthd` repository because the frontend isn't working.
+Finally, go to `localhost:6284` to configure the service. **NOTE:** [I have a ticket open with the `oauthd` repository because the frontend isn't working.](https://github.com/oauth-io/oauthd/issues/196)
 
 ## Further configuration
 
